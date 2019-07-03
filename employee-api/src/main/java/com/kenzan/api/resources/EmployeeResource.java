@@ -33,14 +33,13 @@ public class EmployeeResource
 	@Autowired
 	ResourceDAO<EmployeeVO> employeeDAO;
 
-	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(produces = { MediaType.APPLICATION_JSON_VALUE })
 	public ResponseEntity<List<EmployeeVO>> getAllEmployees()
 	{
 		return ResponseEntity.ok(employeeDAO.getAll());
 	}
 
-	@GetMapping(value = "/{employee-id}", produces = { MediaType.APPLICATION_JSON_VALUE,
-			MediaType.APPLICATION_XML_VALUE })
+	@GetMapping(value = "/{employee-id}", produces = { MediaType.APPLICATION_JSON_VALUE })
 	public EmployeeVO getEmployee(@PathVariable("employee-id") String employee_id)
 	{
 

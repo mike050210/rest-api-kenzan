@@ -11,7 +11,6 @@ import com.mongodb.MongoClient;
 import cz.jirutka.spring.embedmongo.EmbeddedMongoFactoryBean;
 
 @Configuration
-//@EnableAutoConfiguration(exclude = {EmbeddedMongoAutoConfiguration.class})
 public class PersistanceConfiguration {
 
 	private static final String MONGO_DB_URL = "localhost";

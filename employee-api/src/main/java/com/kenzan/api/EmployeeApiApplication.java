@@ -30,8 +30,7 @@ public class EmployeeApiApplication {
 	 * Initialize employees after application starts
 	 */
 	@EventListener(ApplicationReadyEvent.class)
-	private void doSomethingAfterStartup() {
-	    System.out.println("Loading default employees");
+	private void loadEmployeesAfterStartup() {
 
 	    addEmployees(getEmployeesBody());
 	}
